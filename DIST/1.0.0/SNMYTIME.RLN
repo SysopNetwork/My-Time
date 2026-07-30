@@ -1,0 +1,58 @@
+=============================================================================
+ My Time v1.0.0                                    Release Notes / Manual
+ Copyright (C) 2026 Sysop Network
+=============================================================================
+
+ OVERVIEW
+ --------
+ My Time gives every caller their own clock. A user in another time zone
+ sets a personal offset from the BBS clock and from then on sees THEIR
+ time, not the board's. The offset changes display only - the BBS's own
+ timekeeping is never touched.
+
+ COMMANDS (work at any prompt on the board)
+ ------------------------------------------
+   /time            show the BBS clock
+   /mytime          show your clock
+   /mytime +2       run 2 hours ahead of the BBS
+   /mytime -1       run 1 hour behind the BBS
+   /mytime +9:30    half-hour zones work too
+   /mytime reset    match the BBS clock again
+   /mytime ?        usage summary
+
+ Offsets run from -23:59 to +23:59. New users are always on BBS time
+ until they set an offset themselves.
+
+ TEXT VARIABLES
+ --------------
+ My Time registers three named text variables you can embed in ANY
+ message text on the board (menus included):
+
+   MYTIME     the caller's time, h:mm with a/p     e.g. 10:00a, 9:05p
+   MYT_BBS    the BBS time in the same format
+   MYT_OFS    the caller's offset, signed          e.g. +2:00, -1:00
+
+ With no offset set, MYTIME shows BBS time.
+
+ SYSOP NOTES
+ -----------
+ - Installation: copy SNMYTIME.DLL, SNMYTIME.MDF, SNMYTIME.MSG and
+   SNMYTIME.RLN into the BBS directory with the system shut down, then
+   restart. My Time announces its version in the Audit Trail at startup.
+ - No menu entry is needed (the MDF is UNCONDITIONAL / INTERNAL); the
+   commands are global.
+ - Per-user offsets are stored in the system's general user database.
+   No extra data files are created or shipped. Deleting an account
+   removes its stored offset.
+ - Setting: "Log user time-offset changes to the Audit Trail" (default
+   YES). The CNF option is the install default only; change it live with
+   /mytime audit on  or  /mytime audit off  (SYSOP key required). The
+   change applies immediately and is itself recorded in the Audit Trail.
+
+ VERSION HISTORY
+ ---------------
+ 1.0.0  2026-07-29  First public release.
+
+=============================================================================
+ My Time is developed and maintained by Mark Laudenbach at Sysop Network.
+=============================================================================

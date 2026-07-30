@@ -1,0 +1,30 @@
+; SNMYTIME.MDF
+
+Module Name: My Time
+
+Developer: Sysop Network
+
+UNCONDITIONAL
+INTERNAL
+
+Requires:
+Replaces:
+
+Install:
+
+Online user manual: SNMYTIME.RLN
+
+DLLs: SNMYTIME
+MSGs: SNMYTIME
+
+Btrieve page size: 1024
+Btrieve files:     0
+
+Cleanup:
+
+Event-1:
+Event-2:
+Event-3:
+Event-4:
+
+Add-On Utility:

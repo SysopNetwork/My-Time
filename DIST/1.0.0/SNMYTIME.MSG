@@ -1,0 +1,59 @@
+
+LEVEL4 {My Time}
+
+ Should My Time write an Audit Trail entry whenever a user changes
+ their personal time offset?
+ (Install default. Change live: /mytime audit on|off as Sysop.)
+
+AUDITOPT {Log user time-offset changes to the Audit Trail? YES} B
+
+LEVEL6 {My Time}
+
+BBSTIME {
+  [0;37mBBS time is [1;36mN!MYT_BBS[0m[0;37m.[0m
+} T Reply to /time: the real BBS clock
+
+MYTNOW {
+  [0;37mYour time is [1;36mN!MYTIME[0m[0;37m  ([1;37mN!MYT_OFS[0m[0;37m from BBS time [1;36mN!MYT_BBS[0m[0;37m).[0m
+} T Reply to /mytime when an offset is set
+
+MYTSAME {
+  [0;37mYour time is [1;36mN!MYTIME[0m[0;37m - the same as BBS time.[0m
+} T Reply to /mytime when no offset is set
+
+MYTSET {
+  [0;37mOffset saved: your clock now runs [1;37mN!MYT_OFS[0m[0;37m from BBS time.[0m
+  [0;37mYour time is [1;36mN!MYTIME[0m[0;37m.[0m
+} T Confirmation after setting an offset
+
+MYTRESET {
+  [0;37mOffset cleared: your time matches BBS time again - [1;36mN!MYTIME[0m[0;37m.[0m
+} T Confirmation after /mytime reset
+
+MYTHELP {
+  [1;37mMy Time[0m[0;37m - your clock, your time zone[0m
+   [1;33m/time  [0m[0;37m          show the BBS clock[0m
+   [1;33m/mytime[0m[0;37m          show your clock[0m
+   [1;33m/mytime +2[0m[0;37m       run 2 hours ahead of the BBS[0m
+   [1;33m/mytime -1[0m[0;37m       run 1 hour behind the BBS[0m
+   [1;33m/mytime +9:30[0m[0;37m    half-hour zones work too[0m
+   [1;33m/mytime reset[0m[0;37m    match the BBS clock again[0m
+} T Reply to /mytime ? (usage summary)
+
+MYTBADOF {
+  [0;37mThat is not a time offset. Try [1;33m/mytime +2[0m[0;37m, [1;33m/mytime -1[0m[0;37m,[0m
+  [0;37mor [1;33m/mytime reset[0m[0;37m.  Offsets run from [1;37m-23:59[0m[0;37m to [1;37m+23:59[0m[0;37m.  ([1;33m/mytime ?[0m[0;37m = help)[0m
+} T Reply to an unparseable offset value
+
+MYTAUDON {
+  [0;37mMy Time: offset changes will now be logged to the Audit Trail.[0m
+} T Sysop turned audit logging on
+
+MYTAUDOF {
+  [0;37mMy Time: offset-change logging is now off.[0m
+} T Sysop turned audit logging off
+
+MYTNOKEY {
+  [0;37mOnly the Sysop can change My Time settings.[0m
+} T Non-sysop tried /mytime audit
+

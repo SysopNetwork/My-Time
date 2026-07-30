@@ -1,0 +1,6 @@
+; Filename: SNMYTIME_EXP.DEF
+LIBRARY SNMYTIME.DLL
+; My Time - Copyright (c) Sysop Network
+; 32-bit (Win32) export aliases: exported decorated name = internal cdecl name
+EXPORTS
+	_init__snmytime=init__snmytime	@1

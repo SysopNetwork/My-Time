@@ -1,0 +1,13 @@
+# MBBS .MSG files must keep CRLF line endings - the CNF editor cannot parse LF
+*.MSG text eol=crlf
+*.MDF text eol=crlf
+*.RLN text eol=crlf
+
+# Release archives
+*.zip binary
+*.DLL binary
+
+# ANSI art contains escape bytes - never normalize
+*.ANS binary
+
+* text=auto
