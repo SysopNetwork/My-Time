@@ -65,6 +65,13 @@ Current version: **1.0.0** — see `CHANGELOG.MD` for the full history.
 
 ---
 
+## Tips / Donations
+
+- **Cash App:** [$laudenbachm](https://cash.app/$laudenbachm)
+- **Ko-fi:** [ko-fi.com/laudenbachm](https://ko-fi.com/laudenbachm)
+
+---
+
 ## License
 
 MIT License — see `LICENSE`.
